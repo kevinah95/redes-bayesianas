@@ -1,0 +1,1 @@
+zip 2014092195_Kevin-Hernandez_redes-bayesianas.zip Credit_net.net FactorProduct.m FactorMarginalization.m ObserveEvidence.m ComputeJointDistribution.m ComputeMarginal.m README.md
