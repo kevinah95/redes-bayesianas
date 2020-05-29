@@ -30,5 +30,17 @@ end
 M = struct('var', [], 'card', [], 'val', []); % Devuelve un factor
                                               % vacio, cambie esto
 
+%modificamos el vector de factores dada una evidencia
+F = ObserveEvidence(F, E);
+
+%calculamos la distribution conjunta de una distribución definida
+joint = ComputeJointDistribution(F);
+
+%renormalizamos las entradas
+joint.val = joint.val ./ sum(joint.val);  
+
+%marginal sobre la distribucion conjunta
+M = FactorMarginalization(joint, setdiff(joint.var, V));  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 end

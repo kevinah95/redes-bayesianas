@@ -30,6 +30,12 @@ Joint = struct('var', [], 'card', [], 'val', []); % Devuelve un
                                                   % factor vacio,
                                                   % cambie esto
 
+%numero de factores
+numFactor = size(F, 2);
+
+for i=1:numFactor,
+    Joint = FactorProduct(Joint,F(i));
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 end
 
