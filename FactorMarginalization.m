@@ -39,7 +39,9 @@ indxB = AssignmentToIndex(assignments(:, mapB), B.card);
 % Agregue los valores del factor B
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+for i = 1:length(A.val)
+    B.val(indxB(i)) += A.val(i);
+end;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 end

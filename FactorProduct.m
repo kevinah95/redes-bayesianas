@@ -62,7 +62,7 @@ indxB = AssignmentToIndex(assignments(:, mapB), B.card);
 % Agregue correctamente los valores del factor C
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+C.val = A.val(indxA) .* B.val(indxB);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

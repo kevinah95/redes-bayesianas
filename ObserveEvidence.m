@@ -41,6 +41,17 @@ for i = 1:size(E, 1),
             %       SetValueOfAssignment
             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+            %obtiene la asignacion del factor j 
+            assignment = IndexToAssignment(1:prod(F(j).card),F(j).card);
+
+            %obtiene todos los indices de acuerdo a la variable x
+            indices = find(assignment(:,indx) ~= x);
+
+            %obtiene el arreglo de asignaciones
+            assign_set = IndexToAssignment(indices,F(j).card);
+
+            %asigna ceros a mi asignacion
+            F(j) = SetValueOfAssignment(F(j), assign_set, 0);
 
             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
